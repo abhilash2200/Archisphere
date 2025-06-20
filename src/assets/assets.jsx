@@ -1,11 +1,19 @@
 
 import bn1 from './bn-img-1.webp'
 import bn2 from './bn-img-2.webp'
+import aboutus from './aboutus.webp'
+import service1 from './service-1.webp'
+import service3 from './service-3.webp'
+import service2 from './service-2.webp'
 
 
 export const assets = {
     bn1,
-    bn2
+    bn2,
+    aboutus,
+    service1,
+    service2,
+    service3,
     
 }
 
