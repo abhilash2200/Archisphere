@@ -1,11 +1,25 @@
-
 import bn1 from './bn-img-1.webp'
 import bn2 from './bn-img-2.webp'
 import aboutus from './aboutus.webp'
 import service1 from './service-1.webp'
-import service3 from './service-3.webp'
 import service2 from './service-2.webp'
-
+import service3 from './service-3.webp'
+import project1 from './project-img1.webp'
+import project2 from './project-img2.webp'
+import project3 from './project-img3.webp'
+import project4 from './project-img4.webp'
+import project5 from './project-img5.webp'
+import project6 from './project-img6.webp'
+import testi1 from './testimonial-1.webp'
+import testi2 from './testimonial-2.webp'
+import testi3 from './testimonial-3.webp'
+import testi4 from './testimonial-4.webp'
+import blog1 from './blog-1.webp'
+import blog2 from './blog-2.webp'
+import blog3 from './blog-3.webp'
+import blog4 from './blog-4.webp'
+import blog5 from './blog-5.webp'
+import blog6 from './blog-6.webp'
 
 export const assets = {
     bn1,
@@ -14,72 +28,20 @@ export const assets = {
     service1,
     service2,
     service3,
-    
+    project1,
+    project2,
+    project3,
+    project4,
+    project5,
+    project6,
+    testi1,
+    testi2,
+    testi3,
+    testi4,
+    blog1,
+    blog2,
+    blog3,
+    blog4,
+    blog5,
+    blog6,
 }
-
-// export const projectsData = [
-//     {
-//       title: "Skyline Haven",
-//       price: "$2,50,000",
-//       location: "California",
-//       image: project_img_1
-//     },
-//     {
-//       title: "Vista Verde",
-//       price: "$2,50,000",
-//       location: "San Francisco",
-//       image: project_img_2
-//     },
-//     {
-//       title: "Serenity Suites",
-//       price: "$2,50,000",
-//       location: "Chicago",
-//       image: project_img_3
-//     },
-//     {
-//       title: "Central Square",
-//       price: "$2,50,000",
-//       location: "Los Angeles",
-//       image: project_img_4
-//     },
-//     {
-//       title: "Vista Verde",
-//       price: "$2,50,000",
-//       location: "San Francisco",
-//       image: project_img_5
-//     },
-//     {
-//       title: "Serenity Suites",
-//       price: "$2,50,000",
-//       location: "Chicago",
-//       image: project_img_6
-//     },
-    
-//   ];
-
-//   export const testimonialsData = [
-//     {
-//         name: "Donald Jackman",
-//         title: "Marketing Manager",
-//         image: profile_img_1,
-//         alt: "Portrait of Donald Jackman",
-//         rating: 5,
-//         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-//     },
-//     {
-//         name: "Richard Nelson",
-//         title: "UI/UX Designer",
-//         image: profile_img_2,
-//         alt: "Portrait of Richard Nelson",
-//         rating: 4,
-//         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-//     },
-//     {
-//         name: "James Washington",
-//         title: "Co-Founder",
-//         image: profile_img_3,
-//         alt: "Portrait of James Washington",
-//         rating: 5,
-//         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-//     }
-// ];

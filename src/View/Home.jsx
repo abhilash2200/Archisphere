@@ -4,6 +4,10 @@ import { assets } from '../assets/assets';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import CounterUp from '../components/CounterUp';
+import Service from '../components/Service';
+import Projects from '../components/Projects';
+import Testimonial from '../components/Testimonial';
+import Blogs from '../components/Blogs.Jsx';
 
 const Home = () => {
     return (
@@ -66,34 +70,16 @@ const Home = () => {
             <CounterUp />
 
 
-            <div className="container mx-auto px-4 py-16">
-                <div className='relative mb-4'>
-                    <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] after:content[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>What we do</h2>
-                </div>
-                <h3 className='text-[#495944] text-4xl font-semibold uppercase mb-16 font-nunito'>Build for everyone, with everyone.</h3>
-                <div className='flex flex-wrap justify-between items-center'>
-                    <div className="w-full md:w-[32%] lg:w-[32%] group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <img src={assets.service1} alt="Design Consultation" className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="flex items-center justify-between px-6 py-4">
-                            <div className="absolute bottom-0 left-0 w-full bg-white/90 py-5 px-4 transition-all duration-500 group-hover:bottom-0">
-                                <h4 className="text-xl sm:text-2xl font-semibold text-[#495944] text-center capitalize">
-                                    Design Consultation
-                                </h4>
-                            </div>
-                            <h3 className="text-4xl font-bold text-[#495944] opacity-30">01</h3>
-                        </div>
-                    </div>
+            <Service />
+
+            <Projects />
 
 
-                    <div className='w-full md:w-[32%] lg:w-[32%] relative'>
-                        <img src={assets.service2} alt="" />
-                    </div>
-                    <div className='w-full md:w-[32%] lg:w-[32%] relative'>
-                        <img src={assets.service3} alt="" />
-                    </div>
-                </div>
-            </div>
+            <Testimonial />
+
+
+
+            <Blogs />
 
 
         </Layout>
