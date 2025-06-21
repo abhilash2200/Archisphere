@@ -58,7 +58,7 @@ const Blogs = () => {
             : allBlogs.filter((blog) => blog.category === activeFilter);
 
     return (
-        <div className="container px-4 mx-auto">
+        <div className="container px-4 mx-auto py-16">
             <div className="relative mb-4">
                 <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
                     Blog
@@ -73,9 +73,9 @@ const Blogs = () => {
                     <button
                         key={filter}
                         onClick={() => setActiveFilter(filter)}
-                        className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] ${activeFilter === filter
+                        className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] hover:cursor-pointer ${activeFilter === filter
                             ? "text-[#495944]"
-                            : "text-[#495944bb] hover:bg-gray-200"
+                            : "text-[#495944aa] hover:bg-gray-200"
                             }`}
                     >
                         {filter.toUpperCase()}

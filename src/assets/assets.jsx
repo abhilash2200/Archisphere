@@ -20,6 +20,8 @@ import blog3 from './blog-3.webp'
 import blog4 from './blog-4.webp'
 import blog5 from './blog-5.webp'
 import blog6 from './blog-6.webp'
+import newsletter from './newsletter.webp'
+import arrow from './Arrow-4.webp'
 
 export const assets = {
     bn1,
@@ -44,4 +46,6 @@ export const assets = {
     blog4,
     blog5,
     blog6,
+    newsletter,
+    arrow,
 }
