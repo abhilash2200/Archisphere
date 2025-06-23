@@ -1,44 +1,8 @@
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import React from 'react';
 import { assets } from '../assets/assets';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Projects = () => {
-    const containerRef = useRef(null);
-
-    useGSAP(() => {
-        const items = containerRef.current.querySelectorAll('.project-item');
-
-        items.forEach((item) => {
-            const image = item.querySelector('.project-img');
-            const text = item.querySelector('.project-text');
-
-            gsap.timeline({
-                scrollTrigger: {
-                    trigger: item,
-                    start: 'top 80%',
-                    end: 'bottom 60%',
-                    toggleActions: 'play none none none',
-                }
-            })
-                .from(image, {
-                    opacity: 0,
-                    x: -100,
-                    duration: 0.8,
-                    ease: 'power2.out',
-                })
-                .from(text, {
-                    opacity: 0,
-                    x: 100,
-                    duration: 0.8,
-                    ease: 'power2.out',
-                }, "-=0.6");
-        });
-    }, []);
-
 
     const projects = [
         {
@@ -81,44 +45,65 @@ const Projects = () => {
 
 
     return (
-        <section className="py-16">
-            <div className="container mx-auto px-4" ref={containerRef}>
-                <div className="relative mb-4">
-                    <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
-                        Last Projects
-                    </h2>
-                </div>
-                <h3 className='text-[#495944] text-4xl font-semibold uppercase mb-12 font-nunito'>
-                    Made with passion.
-                </h3>
-
-                <div className="flex flex-col gap-24">
-                    {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="project-item w-full flex flex-wrap justify-between items-center overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                        >
-                            <div className="w-full md:w-[60%] lg:w-[70%] project-img">
+        <div className="container mx-auto px-4 py-12">
+            <div className="relative mb-4">
+                <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
+                    Last Projects
+                </h2>
+            </div>
+            <h3 className='text-[#495944] text-4xl font-semibold uppercase mb-12 font-nunito'>
+                Made with passion.
+            </h3>
+            <Splide
+                aria-label="Project Showcase"
+                options={{
+                    type: "loop",
+                    perPage: 1,
+                    autoplay: false,
+                    interval: 4000,
+                    gap: 20,
+                    pauseOnHover: true,
+                    arrows: true,
+                    pagination: true,
+                    speed: 800,
+                }}
+            >
+                {
+                    projects.map((project, index) => (
+                        <SplideSlide key={index} className="flex flex-wrap justify-around items-center gap-y-6">
+                            {/* Image Section */}
+                            <div className="w-full md:w-[60%] lg:w-[60%] overflow-hidden rounded-xl">
                                 <img
                                     src={project.img}
                                     alt={project.title}
-                                    className="w-full h-auto object-cover transition-transform duration-500"
+                                    className="w-full h-full object-cover rounded-xl transform transition-transform duration-500 hover:scale-105"
                                 />
                             </div>
-                            <div className="w-full md:w-[40%] lg:w-[30%] project-text">
-                                <div className="bg-gradient-to-t from-white/95 via-white/80 to-transparent p-6 backdrop-blur-sm transition-all duration-500">
-                                    <h4 className="text-lg sm:text-xl font-semibold text-[#495944] capitalize">
+
+                            {/* Text Section */}
+                            <div className="w-full md:w-[40%] lg:w-[30%] relative">
+                                <div className="bg-transparent p-6 rounded-xl transition-all duration-500 ">
+                                    <div className="flex flex-row items-center mb-2 -ml-[80px]">
+                                        <div className="w-[180px] h-0.5 bg-[#495944] mr-3"></div>
+                                        <p className="text-sm font-medium text-[#7A7A7A]">
+                                            <span className="text-[#495944] text-2xl font-semibold">{project.year}</span>
+                                        </p>
+                                    </div>
+
+                                    <h4 className="text-xl font-bold text-[#495944] capitalize mb-2">
                                         {project.title}
                                     </h4>
-                                    <p className="text-sm text-[#505050]">{project.description}</p>
-                                    <p className="text-sm text-[#505050]">{project.year}</p>
+                                    <p className="text-sm text-[#505050] mb-4 leading-relaxed">
+                                        {project.description}
+                                    </p>
+
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
+                        </SplideSlide>
+                    ))
+                }
+            </Splide>
+        </div>
     );
 };
 

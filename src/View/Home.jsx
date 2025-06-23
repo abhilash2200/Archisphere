@@ -10,6 +10,7 @@ import Testimonial from "../components/Testimonial";
 import Blogs from "../components/Blogs.Jsx";
 
 const Home = () => {
+
   return (
     <Layout>
       <div className="relative">
