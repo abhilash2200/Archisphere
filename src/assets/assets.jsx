@@ -20,6 +20,13 @@ import blog3 from './blog-3.webp'
 import blog4 from './blog-4.webp'
 import blog5 from './blog-5.webp'
 import blog6 from './blog-6.webp'
+import blog7 from './blog-7.webp'
+import blog8 from './blog-8.webp'
+import blog9 from './blog-9.webp'
+import blog10 from './blog-10.webp'
+import blog11 from './blog-11.webp'
+import blog12 from './blog-12.webp'
+import blog13 from './blog-13.webp'
 import newsletter from './newsletter.webp'
 import arrow from './Arrow-4.webp'
 import footer from './footer.webp'
@@ -60,6 +67,13 @@ export const assets = {
     blog4,
     blog5,
     blog6,
+    blog7,
+    blog8,
+    blog9,
+    blog10,
+    blog11,
+    blog12,
+    blog13,
     newsletter,
     arrow,
     footer,

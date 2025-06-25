@@ -10,7 +10,8 @@ const allBlogs = [
     category: "press",
     title: "the role of technology in modern architecture",
     img: assets.blog1,
-    excerpt: "Technology plays a transformative role in modern architecture, shaping how buildings are designed...",
+    excerpt:
+      "Technology plays a transformative role in modern architecture, shaping how buildings are designed...",
     link: "/blog/the-role-of-technology-in-modern-architecture",
   },
   {
@@ -18,7 +19,8 @@ const allBlogs = [
     category: "projects",
     title: "Enhancing business through thoughtful design",
     img: assets.blog2,
-    excerpt: "Enhancing a business through thoughtful design involves creating spaces and experiences that...",
+    excerpt:
+      "Enhancing a business through thoughtful design involves creating spaces and experiences that...",
     link: "/blog/enhancing-business-through-thoughtful-design",
   },
   {
@@ -26,7 +28,8 @@ const allBlogs = [
     category: "studio",
     title: "sustainable design: building a greener future in architecture",
     img: assets.blog3,
-    excerpt: "Sustainable design is revolutionizing the way we approach architecture by creating structures...",
+    excerpt:
+      "Sustainable design is revolutionizing the way we approach architecture by creating structures...",
     link: "/blog/sustainable-design-building-a-greener-future-in-architecture",
   },
   {
@@ -34,7 +37,8 @@ const allBlogs = [
     category: "press",
     title: "residential architecture: crafting personalized living spaces",
     img: assets.blog4,
-    excerpt: "Residential architecture is the art and science of designing homes that reflect individuality...",
+    excerpt:
+      "Residential architecture is the art and science of designing homes that reflect individuality...",
     link: "/blog/residential-architecture-crafting-personalized-living-spaces",
   },
   {
@@ -42,7 +46,8 @@ const allBlogs = [
     category: "projects",
     title: "maximizing space: tips for multipurpose architecture",
     img: assets.blog5,
-    excerpt: "Multipurpose architecture focuses on creating versatile spaces that adapt to various functions...",
+    excerpt:
+      "Multipurpose architecture focuses on creating versatile spaces that adapt to various functions...",
     link: "/blog/maximizing-space-tips-for-multipurpose-architecture",
   },
   {
@@ -50,7 +55,8 @@ const allBlogs = [
     category: "projects",
     title: "oslo's architecture gems: inspiration from our city",
     img: assets.blog6,
-    excerpt: "Oslo, Norway's capital, is a treasure trove of architectural marvels that blend tradition...",
+    excerpt:
+      "Oslo, Norway's capital, is a treasure trove of architectural marvels that blend tradition...",
     link: "/blog/oslos-architecture-gems-inspiration-from-our-city",
   },
   {
@@ -58,7 +64,8 @@ const allBlogs = [
     category: "studio",
     title: "adaptive reuse: giving old buildings new life",
     img: assets.blog7,
-    excerpt: "Adaptive reuse is a sustainable strategy that transforms existing buildings for new purposes...",
+    excerpt:
+      "Adaptive reuse is a sustainable strategy that transforms existing buildings for new purposes...",
     link: "/blog/adaptive-reuse-giving-old-buildings-new-life",
   },
   {
@@ -66,7 +73,8 @@ const allBlogs = [
     category: "press",
     title: "how light influences architectural experience",
     img: assets.blog8,
-    excerpt: "Light is one of the most powerful elements in architecture, affecting mood, perception, and space...",
+    excerpt:
+      "Light is one of the most powerful elements in architecture, affecting mood, perception, and space...",
     link: "/blog/how-light-influences-architectural-experience",
   },
   {
@@ -74,7 +82,8 @@ const allBlogs = [
     category: "projects",
     title: "reviving heritage: restoring architectural icons",
     img: assets.blog9,
-    excerpt: "Heritage restoration projects breathe new life into historical structures while preserving identity...",
+    excerpt:
+      "Heritage restoration projects breathe new life into historical structures while preserving identity...",
     link: "/blog/reviving-heritage-restoring-architectural-icons",
   },
   {
@@ -82,7 +91,8 @@ const allBlogs = [
     category: "studio",
     title: "designing for well-being: the psychology of space",
     img: assets.blog10,
-    excerpt: "Understanding how space affects human behavior can lead to healthier, more productive environments...",
+    excerpt:
+      "Understanding how space affects human behavior can lead to healthier, more productive environments...",
     link: "/blog/designing-for-well-being-the-psychology-of-space",
   },
   {
@@ -90,7 +100,8 @@ const allBlogs = [
     category: "projects",
     title: "architecture in extreme climates: designing for resilience",
     img: assets.blog11,
-    excerpt: "Building in extreme conditions demands innovative materials and strategies for long-term resilience...",
+    excerpt:
+      "Building in extreme conditions demands innovative materials and strategies for long-term resilience...",
     link: "/blog/architecture-in-extreme-climates-designing-for-resilience",
   },
   {
@@ -98,7 +109,8 @@ const allBlogs = [
     category: "press",
     title: "community-centered architecture: building connection",
     img: assets.blog12,
-    excerpt: "Architecture can foster connection and inclusion when designed with communities at its heart...",
+    excerpt:
+      "Architecture can foster connection and inclusion when designed with communities at its heart...",
     link: "/blog/community-centered-architecture-building-connection",
   },
   {
@@ -106,7 +118,8 @@ const allBlogs = [
     category: "studio",
     title: "material innovation: the future of construction",
     img: assets.blog13,
-    excerpt: "From self-healing concrete to bamboo, new materials are changing how we build sustainably...",
+    excerpt:
+      "From self-healing concrete to bamboo, new materials are changing how we build sustainably...",
     link: "/blog/material-innovation-the-future-of-construction",
   },
   {
@@ -114,7 +127,8 @@ const allBlogs = [
     category: "projects",
     title: "coastal design: blending architecture with nature",
     img: assets.blog14,
-    excerpt: "Coastal architecture demands sensitivity to the landscape, weather, and environmental impact...",
+    excerpt:
+      "Coastal architecture demands sensitivity to the landscape, weather, and environmental impact...",
     link: "/blog/coastal-design-blending-architecture-with-nature",
   },
   {
@@ -122,7 +136,8 @@ const allBlogs = [
     category: "press",
     title: "the evolution of urban housing",
     img: assets.blog15,
-    excerpt: "Urban housing has evolved to address affordability, density, and lifestyle shifts in growing cities...",
+    excerpt:
+      "Urban housing has evolved to address affordability, density, and lifestyle shifts in growing cities...",
     link: "/blog/the-evolution-of-urban-housing",
   },
   {
@@ -130,7 +145,8 @@ const allBlogs = [
     category: "studio",
     title: "architectural photography: capturing design essence",
     img: assets.blog16,
-    excerpt: "Great architecture deserves to be documented — photography bridges art and architectural story...",
+    excerpt:
+      "Great architecture deserves to be documented — photography bridges art and architectural story...",
     link: "/blog/architectural-photography-capturing-design-essence",
   },
   {
@@ -138,7 +154,8 @@ const allBlogs = [
     category: "projects",
     title: "cultural spaces: designing for art and performance",
     img: assets.blog17,
-    excerpt: "Architectural design can enhance storytelling, sound, and audience immersion in cultural venues...",
+    excerpt:
+      "Architectural design can enhance storytelling, sound, and audience immersion in cultural venues...",
     link: "/blog/cultural-spaces-designing-for-art-and-performance",
   },
   {
@@ -146,7 +163,8 @@ const allBlogs = [
     category: "press",
     title: "biophilic design: bringing nature indoors",
     img: assets.blog18,
-    excerpt: "Biophilic design improves well-being by integrating nature into built environments...",
+    excerpt:
+      "Biophilic design improves well-being by integrating nature into built environments...",
     link: "/blog/biophilic-design-bringing-nature-indoors",
   },
   {
@@ -154,7 +172,8 @@ const allBlogs = [
     category: "studio",
     title: "mobility and architecture: cities of the future",
     img: assets.blog19,
-    excerpt: "As cities evolve, architecture must accommodate new forms of mobility, smart transit, and fluid space...",
+    excerpt:
+      "As cities evolve, architecture must accommodate new forms of mobility, smart transit, and fluid space...",
     link: "/blog/mobility-and-architecture-cities-of-the-future",
   },
   {
@@ -162,7 +181,8 @@ const allBlogs = [
     category: "projects",
     title: "educational campuses: inspiring next-gen learning",
     img: assets.blog20,
-    excerpt: "Modern education spaces are flexible, tech-integrated, and designed for creative collaboration...",
+    excerpt:
+      "Modern education spaces are flexible, tech-integrated, and designed for creative collaboration...",
     link: "/blog/educational-campuses-inspiring-next-gen-learning",
   },
   {
@@ -170,11 +190,11 @@ const allBlogs = [
     category: "press",
     title: "iconic skylines: shaping identity through design",
     img: assets.blog21,
-    excerpt: "Skylines define a city’s character — architects are using form and symbolism to elevate identity...",
+    excerpt:
+      "Skylines define a city’s character — architects are using form and symbolism to elevate identity...",
     link: "/blog/iconic-skylines-shaping-identity-through-design",
   },
 ];
-
 
 const filters = ["All article", "projects", "press", "studio"];
 
@@ -200,16 +220,14 @@ const Blogs = () => {
           </h3>
         </div>
 
-
         <div className="flex flex-wrap gap-x-6 justify-center mb-8">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] hover:cursor-pointer ${activeFilter === filter
-                ? "text-[#495944]"
-                : "text-[#0c0c0caa]"
-                }`}
+              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] hover:cursor-pointer ${
+                activeFilter === filter ? "text-[#495944]" : "text-[#0c0c0caa]"
+              }`}
             >
               {filter.toUpperCase()}
             </button>
@@ -242,7 +260,10 @@ const Blogs = () => {
                     {blog.excerpt}
                   </p>
                   <div className="mt-auto">
-                    <Link to={blog.link} className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium">
+                    <Link
+                      to={blog.link}
+                      className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium"
+                    >
                       Read More →
                     </Link>
                   </div>

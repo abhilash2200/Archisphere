@@ -1,9 +1,9 @@
-import React from 'react'
-import Header from './Header'
-import Footer from './Footer.Jsx';
-import { ToastContainer } from 'react-toastify';
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer.Jsx";
+import { ToastContainer } from "react-toastify";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
       <ToastContainer />
@@ -11,7 +11,7 @@ const Layout = ({children}) => {
       <div>{children}</div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

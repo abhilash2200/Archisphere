@@ -47,9 +47,8 @@ const About = () => {
             <div className="flex justify-start mt-8">
               <button
                 className="bg-[#495944] text-white font-roboto tracking-wide capitalize px-8 py-3 rounded-md hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] transition-colors duration-300 hover:cursor-pointer"
-                onClick={() => (window.location.href = "/About")}
-              >
-                Learn More
+                onClick={() => (window.location.href = "/Contact")}>
+                Contact Us
               </button>
             </div>
           </div>

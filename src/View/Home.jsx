@@ -243,7 +243,7 @@ const Home = () => {
                     <h4 className="text-lg sm:text-xl font-semibold text-[#495944] capitalize">
                       {service.title}
                     </h4>
-                    <h3 className="text-4xl font-bold text-[#495944]/30">{service.number}</h3>
+                    <h3 className="text-4xl font-bold text-[#495944]/30 group-hover:text-[#495944] transition">{service.number}</h3>
                   </div>
                 </div>
               </div>
@@ -290,7 +290,7 @@ const Home = () => {
                 {/* Text Section */}
                 <div className="w-full md:w-[40%] lg:w-[30%] relative">
                   <div className="bg-transparent p-6 rounded-xl transition-all duration-500 ">
-                    <div className="flex flex-row items-center mb-2 -ml-[80px]">
+                    <div className="flex flex-row items-center mb-2 -ml-[150px]">
                       <div className="w-[180px] h-0.5 bg-[#495944] mr-3"></div>
                       <p className="text-sm font-medium text-[#7A7A7A]">
                         <span className="text-[#495944] text-2xl font-semibold">{project.year}</span>
