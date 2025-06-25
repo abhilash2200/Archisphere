@@ -22,6 +22,20 @@ import blog5 from './blog-5.webp'
 import blog6 from './blog-6.webp'
 import newsletter from './newsletter.webp'
 import arrow from './Arrow-4.webp'
+import footer from './footer.webp'
+import ammanrotanahotel from './amman-rotana-hotel.webp'
+import proin1 from './pro-in-1.webp'
+import proin2 from './pro-in-2.webp'
+import proin3 from './pro-in-3.webp'
+import proin4 from './pro-in-4.webp'
+import proin5 from './pro-in-5.webp'
+import proin6 from './pro-in-6.webp'
+import proin7 from './pro-in-7.webp'
+import proin8 from './pro-in-13.webp'
+import proin9 from './pro-in-9.webp'
+import proin10 from './pro-in-10.webp'
+import proin11 from './pro-in-11.webp'
+import proin12 from './pro-in-12.webp'
 
 export const assets = {
     bn1,
@@ -48,4 +62,18 @@ export const assets = {
     blog6,
     newsletter,
     arrow,
+    footer,
+    ammanrotanahotel,
+    proin1,
+    proin2,
+    proin3,
+    proin4,
+    proin5,
+    proin6,
+    proin7,
+    proin8,
+    proin9,
+    proin10,
+    proin11,
+    proin12,
 }
