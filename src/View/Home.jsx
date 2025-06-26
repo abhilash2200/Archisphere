@@ -162,43 +162,94 @@ const Home = () => {
         </Splide>
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 w-full px-4">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-4 capitalize text-[#D1BAA2] leading-tight">
+          <motion.h2
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-4 capitalize text-[#D1BAA2] leading-tight"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
             modern innovative architecture
-          </h2>
-          <p className="text-sm md:text-base mb-4 px-4 md:px-0">
+          </motion.h2>
+
+          <motion.p
+            className="text-sm md:text-base mb-4 px-4 md:px-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             From as low as $20 A small river named Durden flows by their place
             and supplies it with the necessary regularly.
-          </p>
-          <button
-            className="bg-[#495944] text-white px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:text-[#495944] transition-colors duration-300 text-sm md:text-base"
+          </motion.p>
+
+          <motion.button
+            className="bg-[#495944] text-white px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:cursor-pointer hover:text-[#495944] transition-colors duration-300 text-sm md:text-base"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
             onClick={() => (window.location.href = "/Services")}
           >
             Explore More
-          </button>
+          </motion.button>
         </div>
       </div>
 
       {/* About Us Section */}
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="w-full md:w-1/2">
+          {/* IMAGE BLOCK */}
+          <motion.div
+            className="w-full md:w-1/2"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <img src={assets.aboutus} alt="About our company" className="w-full h-auto" />
-          </div>
-          <div className="w-full md:w-1/2 px-0 md:px-4">
+          </motion.div>
+
+          {/* TEXT BLOCK */}
+          <motion.div
+            className="w-full md:w-1/2 px-0 md:px-4"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="relative mb-4 md:mb-8">
               <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
                 About Us
               </h2>
             </div>
-            <h3 className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 font-nunito">
+
+            <motion.h3
+              className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 font-nunito"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               Break out of your routine with a global perspective.
-            </h3>
-            <p className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]">
+            </motion.h3>
+
+            <motion.p
+              className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
               Based on collective work and shared knowledge, Architecture-Studio
               aims to favour dialogue and debate, to transform individual
               knowledge into increased creative potential.
-            </p>
-            <p className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]">
+            </motion.p>
+
+            <motion.p
+              className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
               Our Studio is a architecture practice based in Prague, Chech and
               Venice. Today, it includes 150 architects, urban planners,
               landscape and interior designers of 25 different nationalities.
@@ -206,32 +257,61 @@ const Home = () => {
               conception. From the very beginning, the practice has believed in
               the virtues of exchange, crossing ideas, common effort, shred
               knowledge.
-            </p>
-            <div className="flex justify-start mt-6 md:mt-8">
+            </motion.p>
+
+            <motion.div
+              className="flex justify-start mt-6 md:mt-8"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              viewport={{ once: true }}
+            >
               <button
-                className="bg-[#495944] text-white font-roboto tracking-wide capitalize px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] transition-colors duration-300 text-sm md:text-base"
+                className="bg-[#495944] text-white font-roboto tracking-wide capitalize px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] transition-colors duration-300 text-sm md:text-base hover:cursor-pointer"
                 onClick={() => (window.location.href = "/About")}
               >
                 Learn More
               </button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
+
 
       <CounterUp />
 
       {/* Services Section */}
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className='relative mb-4'>
-          <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>What we do</h2>
-        </div>
-        <h3 className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-6 md:mb-8 font-nunito'>Build for everyone, with everyone.</h3>
+        <motion.div
+          className="relative mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
+            What we do
+          </h2>
+        </motion.div>
+
+        <motion.h3
+          className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-6 md:mb-8 font-nunito'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Build for everyone, with everyone.
+        </motion.h3>
         <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="w-full md:w-[32%] group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mb-4 md:mb-0"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
               <div className="relative">
                 <img
@@ -244,25 +324,40 @@ const Home = () => {
                     <h4 className="text-base md:text-lg font-semibold text-[#495944] capitalize">
                       {service.title}
                     </h4>
-                    <h3 className="text-2xl md:text-4xl font-bold text-[#495944]/30 group-hover:text-[#495944] transition">{service.number}</h3>
+                    <h3 className="text-2xl md:text-4xl font-bold text-[#495944]/30 group-hover:text-[#495944] transition">
+                      {service.number}
+                    </h3>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
       {/* Projects Section */}
       <div className="container mx-auto px-4 py-12">
-        <div className="relative mb-4">
+        <motion.div
+          className="relative mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
             Last Projects
           </h2>
-        </div>
-        <h3 className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito'>
+        </motion.div>
+
+        <motion.h3
+          className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Made with passion.
-        </h3>
+        </motion.h3>
         <Splide
           options={{
             type: "loop",
@@ -283,17 +378,29 @@ const Home = () => {
         >
           {projects.map((project, index) => (
             <SplideSlide key={index} className="flex flex-col md:flex-row justify-around items-center gap-y-6 pb-8">
-              {/* Image Section */}
-              <div className="w-full md:w-[60%] overflow-hidden rounded-xl">
+              {/* Image with Motion */}
+              <motion.div
+                className="w-full md:w-[60%] overflow-hidden rounded-xl"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
                 <img
                   src={project.img}
                   alt={project.title}
                   className="w-full h-64 md:h-auto object-cover rounded-xl transform transition-transform duration-500 hover:scale-105"
                 />
-              </div>
+              </motion.div>
 
-              {/* Text Section */}
-              <div className="w-full md:w-[40%] lg:w-[30%] relative px-4 md:px-0">
+              {/* Text with Motion */}
+              <motion.div
+                className="w-full md:w-[40%] lg:w-[30%] relative px-4 md:px-0"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <div className="bg-transparent p-4 md:p-6 rounded-xl transition-all duration-500">
                   <div className="flex flex-row items-center mb-2 md:-ml-[150px]">
                     <div className="w-12 md:w-[180px] h-0.5 bg-[#495944] mr-3"></div>
@@ -317,7 +424,7 @@ const Home = () => {
                     <SlActionRedo className="group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </SplideSlide>
           ))}
         </Splide>

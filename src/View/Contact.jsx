@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 
 const Contact = () => {
@@ -54,21 +55,41 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-[#495944] py-12 md:py-20 text-white text-center mt-20">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-3 md:mb-4">
+          <motion.h1
+            className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-3 md:mb-4"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             Get in Touch
-          </h1>
-          <p className="text-base md:text-lg max-w-2xl mx-auto text-[#E6E6E6]">
+          </motion.h1>
+
+          <motion.p
+            className="text-base md:text-lg max-w-2xl mx-auto text-[#E6E6E6]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Whether you're planning your next project or have inquiries about
             our services, we're here to help.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Contact Form + Info */}
       <section className="py-8 md:py-16 px-4 bg-[#F5F5F5]">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+
           {/* Contact Form */}
-          <div className="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-md md:shadow-lg">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-md md:shadow-lg"
+          >
             <h2 className="text-xl md:text-2xl font-semibold text-[#495944] mb-4 md:mb-6">
               Send Us a Message
             </h2>
@@ -81,7 +102,8 @@ const Contact = () => {
                   type="text"
                   name="name"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 md:py-3 focus:outline-none focus:ring-2 focus:ring-[#D1BAA2]"
-                  placeholder="Your full name" required
+                  placeholder="Your full name"
+                  required
                 />
               </div>
               <div>
@@ -92,7 +114,8 @@ const Contact = () => {
                   type="email"
                   name="email"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 md:py-3 focus:outline-none focus:ring-2 focus:ring-[#D1BAA2]"
-                  placeholder="you@example.com" required
+                  placeholder="you@example.com"
+                  required
                 />
               </div>
               <div>
@@ -103,7 +126,8 @@ const Contact = () => {
                   name="message"
                   rows="4"
                   className="w-full border border-gray-300 rounded-lg px-4 py-2 md:py-3 focus:outline-none focus:ring-2 focus:ring-[#D1BAA2]"
-                  placeholder="Tell us about your project or question" required
+                  placeholder="Tell us about your project or question"
+                  required
                 ></textarea>
               </div>
               <button
@@ -113,10 +137,16 @@ const Contact = () => {
                 Submit
               </button>
             </form>
-          </div>
+          </motion.div>
 
           {/* Contact Information */}
-          <div className="flex flex-col justify-center text-[#333] p-4 md:p-0">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-center text-[#333] p-4 md:p-0"
+          >
             <h2 className="text-xl md:text-2xl font-semibold text-[#495944] mb-4 md:mb-6">
               Contact Details
             </h2>
@@ -135,7 +165,7 @@ const Contact = () => {
             <p className="mt-4 md:mt-6 text-xs md:text-sm text-[#666]">
               We respond to inquiries within 24 hours on business days.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 

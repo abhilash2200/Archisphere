@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout.Jsx";
 import { assets } from "../assets/assets";
+import { motion } from "framer-motion";
 import {
   FaRegLightbulb,
   FaDraftingCompass,
@@ -70,10 +71,16 @@ const Services = () => {
         </div>
       </section>
 
-       {/* Process Section */}
+      {/* Process Section */}
       <section className="bg-[#F8F8F8] py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12 md:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
             <span className="inline-block text-sm md:text-base tracking-widest text-[#D1BAA2] uppercase mb-2">
               Methodology
             </span>
@@ -83,7 +90,7 @@ const Services = () => {
             <p className="max-w-2xl mx-auto text-gray-600">
               A structured approach that ensures clarity, creativity, and client satisfaction
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -108,8 +115,12 @@ const Services = () => {
                 desc: "Final implementation and handover",
               },
             ].map((step, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
+                viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 text-center"
               >
                 <div className="bg-[#F5F2EA] w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center mb-4 text-[#D1BAA2]">
@@ -118,10 +129,8 @@ const Services = () => {
                 <h3 className="text-lg md:text-xl font-semibold text-[#495944] mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base">
-                  {step.desc}
-                </p>
-              </div>
+                <p className="text-gray-600 text-sm md:text-base">{step.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -131,22 +140,38 @@ const Services = () => {
       <section className="py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-            <div className="md:w-1/2">
-              <img 
-                src={assets.aboutus} 
-                alt="Architecture team working" 
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="md:w-1/2"
+            >
+              <img
+                src={assets.aboutus}
+                alt="Architecture team working"
                 className="rounded-xl shadow-md w-full h-auto"
                 loading="lazy"
               />
-            </div>
-            <div className="md:w-1/2">
+            </motion.div>
+
+            {/* Text + Items */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="md:w-1/2"
+            >
               <span className="inline-block text-sm md:text-base tracking-widest text-[#D1BAA2] uppercase mb-2">
                 Our Difference
               </span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#495944] mb-6">
                 Why Clients Choose Us
               </h2>
-              
+
               <div className="space-y-6">
                 {[
                   {
@@ -166,20 +191,25 @@ const Services = () => {
                     desc: "Clear communication at every project stage",
                   },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4">
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.2 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-4"
+                  >
                     <FaCheckCircle className="text-[#D1BAA2] mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="text-lg font-semibold text-[#495944] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600 text-sm md:text-base">
-                        {item.desc}
-                      </p>
+                      <p className="text-gray-600 text-sm md:text-base">{item.desc}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -187,13 +217,37 @@ const Services = () => {
       {/* CTA Section */}
       <section className="bg-[#495944] py-16 md:py-20 text-white text-center">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase mb-4">
+
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase mb-4"
+          >
             Ready to Begin Your Project?
-          </h2>
-          <p className="text-lg md:text-xl text-[#E0E0E0] mb-8 max-w-2xl mx-auto">
+          </motion.h2>
+
+          {/* Subtext */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg md:text-xl text-[#E0E0E0] mb-8 max-w-2xl mx-auto"
+          >
             Let's collaborate to create spaces that inspire and endure
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
             <a
               href="/contact"
               className="inline-block bg-white text-[#495944] px-8 py-3 rounded-full text-sm font-semibold uppercase hover:bg-[#D1BAA2] hover:text-white transition duration-300"
@@ -206,7 +260,8 @@ const Services = () => {
             >
               View Our Work
             </a>
-          </div>
+          </motion.div>
+
         </div>
       </section>
     </Layout>
