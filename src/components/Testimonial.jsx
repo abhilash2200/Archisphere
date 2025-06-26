@@ -64,6 +64,24 @@ const Testimonial = () => {
             arrows: false,
             pagination: true,
             speed: 1000,
+            breakpoints: {
+              450: {
+                perPage: 1,
+                gap: "1rem"
+              },
+              640: {
+                perPage: 2,
+                gap: "1.5rem"
+              },
+              1024: {
+                perPage: 3,
+                gap: "2rem"
+              },
+              1280: {
+                perPage: 4,
+                gap: "2rem"
+              }
+            }
           }}
         >
           {testimonial.map((item, index) => (

@@ -139,10 +139,9 @@ const Home = () => {
 
   return (
     <Layout>
+      {/* Hero Banner Section */}
       <div className="relative">
-        {/* <div className='absolute inset-0 bg-black/30 z-2'></div> */}
         <Splide
-          aria-label="My Favorite Images"
           options={{
             type: "loop",
             perPage: 1,
@@ -155,23 +154,23 @@ const Home = () => {
           }}
         >
           <SplideSlide>
-            <img src={assets.bn1} alt="Image 1" className="w-full h-auto" />
+            <img src={assets.bn1} alt="Modern Architecture" className="w-full h-screen md:h-[90vh] object-cover" />
           </SplideSlide>
           <SplideSlide>
-            <img src={assets.bn2} alt="Image 2" className="w-full h-auto" />
+            <img src={assets.bn2} alt="Innovative Design" className="w-full h-screen md:h-[90vh] object-cover" />
           </SplideSlide>
         </Splide>
 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white animate-fadeIn z-4">
-          <h2 className="text-6xl font-bold mb-4 capitalize text-[#D1BAA2] leading-14">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 w-full px-4">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-4 capitalize text-[#D1BAA2] leading-tight">
             modern innovative architecture
           </h2>
-          <p className="mb-4">
+          <p className="text-sm md:text-base mb-4 px-4 md:px-0">
             From as low as $20 A small river named Durden flows by their place
             and supplies it with the necessary regularly.
           </p>
           <button
-            className="bg-[#495944] text-white px-8 py-3 rounded-md hover:bg-white hover:text-[#495944] transition-colors duration-300 hover:cursor-pointer"
+            className="bg-[#495944] text-white px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:text-[#495944] transition-colors duration-300 text-sm md:text-base"
             onClick={() => (window.location.href = "/Services")}
           >
             Explore More
@@ -179,26 +178,27 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-wrap justify-between items-center">
-          <div className="w-full lg:w-1/2 md:w-1/2">
-            <img src={assets.aboutus} alt="" />
+      {/* About Us Section */}
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="w-full md:w-1/2">
+            <img src={assets.aboutus} alt="About our company" className="w-full h-auto" />
           </div>
-          <div className="w-full lg:w-1/2 md:w-1/2 px-4">
-            <div className="relative mb-8">
-              <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] after:content[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
+          <div className="w-full md:w-1/2 px-0 md:px-4">
+            <div className="relative mb-4 md:mb-8">
+              <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
                 About Us
               </h2>
             </div>
-            <h3 className="text-[#495944] text-4xl font-semibold uppercase mb-16 font-nunito">
+            <h3 className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 font-nunito">
               Break out of your routine with a global perspective.
             </h3>
-            <p className="mb-4 font-poppins text-[18px] text-[#505050]">
+            <p className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]">
               Based on collective work and shared knowledge, Architecture-Studio
               aims to favour dialogue and debate, to transform individual
               knowledge into increased creative potential.
             </p>
-            <p className="mb-4 font-poppins text-[18px] text-[#505050]">
+            <p className="mb-4 font-poppins text-base md:text-[18px] text-[#505050]">
               Our Studio is a architecture practice based in Prague, Chech and
               Venice. Today, it includes 150 architects, urban planners,
               landscape and interior designers of 25 different nationalities.
@@ -207,9 +207,9 @@ const Home = () => {
               the virtues of exchange, crossing ideas, common effort, shred
               knowledge.
             </p>
-            <div className="flex justify-start mt-8">
+            <div className="flex justify-start mt-6 md:mt-8">
               <button
-                className="bg-[#495944] text-white font-roboto tracking-wide capitalize px-8 py-3 rounded-md hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] transition-colors duration-300 hover:cursor-pointer"
+                className="bg-[#495944] text-white font-roboto tracking-wide capitalize px-6 py-2 md:px-8 md:py-3 rounded-md hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] transition-colors duration-300 text-sm md:text-base"
                 onClick={() => (window.location.href = "/About")}
               >
                 Learn More
@@ -221,29 +221,30 @@ const Home = () => {
 
       <CounterUp />
 
-      <div className="container mx-auto px-4 py-16">
+      {/* Services Section */}
+      <div className="container mx-auto px-4 py-12 md:py-16">
         <div className='relative mb-4'>
-          <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] after:content[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>What we do</h2>
+          <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>What we do</h2>
         </div>
-        <h3 className='text-[#495944] text-4xl font-semibold uppercase mb-8 font-nunito'>Build for everyone, with everyone.</h3>
-        <div className="flex flex-wrap justify-between gap-6">
+        <h3 className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-6 md:mb-8 font-nunito'>Build for everyone, with everyone.</h3>
+        <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="w-full md:w-[32%] lg:w-[32%] group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="w-full md:w-[32%] group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 mb-4 md:mb-0"
             >
               <div className="relative">
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 md:h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent p-6 backdrop-blur-sm transition-all duration-500 group-hover:bottom-0">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white/95 via-white/80 to-transparent p-4 md:p-6 backdrop-blur-sm transition-all duration-500 group-hover:bottom-0">
                   <div className="flex flex-wrap items-center justify-between">
-                    <h4 className="text-lg sm:text-xl font-semibold text-[#495944] capitalize">
+                    <h4 className="text-base md:text-lg font-semibold text-[#495944] capitalize">
                       {service.title}
                     </h4>
-                    <h3 className="text-4xl font-bold text-[#495944]/30 group-hover:text-[#495944] transition">{service.number}</h3>
+                    <h3 className="text-2xl md:text-4xl font-bold text-[#495944]/30 group-hover:text-[#495944] transition">{service.number}</h3>
                   </div>
                 </div>
               </div>
@@ -252,167 +253,170 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Projects Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="relative mb-4">
-          <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
+          <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
             Last Projects
           </h2>
         </div>
-        <h3 className='text-[#495944] text-4xl font-semibold uppercase mb-12 font-nunito'>
+        <h3 className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito'>
           Made with passion.
         </h3>
         <Splide
-          aria-label="Project Showcase"
           options={{
             type: "loop",
             perPage: 1,
             autoplay: false,
             interval: 4000,
-            gap: 20,
+            gap: "1rem",
             pauseOnHover: true,
             arrows: true,
             pagination: true,
             speed: 800,
+            breakpoints: {
+              768: {
+                arrows: false,
+              }
+            }
           }}
         >
-          {
-            projects.map((project, index) => (
-              <SplideSlide key={index} className="flex flex-wrap justify-around items-center gap-y-6">
-                {/* Image Section */}
-                <div className="w-full md:w-[60%] lg:w-[60%] overflow-hidden rounded-xl">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-xl transform transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
+          {projects.map((project, index) => (
+            <SplideSlide key={index} className="flex flex-col md:flex-row justify-around items-center gap-y-6 pb-8">
+              {/* Image Section */}
+              <div className="w-full md:w-[60%] overflow-hidden rounded-xl">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-64 md:h-auto object-cover rounded-xl transform transition-transform duration-500 hover:scale-105"
+                />
+              </div>
 
-                {/* Text Section */}
-                <div className="w-full md:w-[40%] lg:w-[30%] relative">
-                  <div className="bg-transparent p-6 rounded-xl transition-all duration-500 ">
-                    <div className="flex flex-row items-center mb-2 -ml-[150px]">
-                      <div className="w-[180px] h-0.5 bg-[#495944] mr-3"></div>
-                      <p className="text-sm font-medium text-[#7A7A7A]">
-                        <span className="text-[#495944] text-2xl font-semibold">{project.year}</span>
-                      </p>
-                    </div>
-
-                    <h4 className="text-xl font-bold text-[#495944] capitalize mb-2">
-                      {project.title}
-                    </h4>
-                    <p className="text-sm text-[#505050] mb-4 leading-relaxed">
-                      {project.description}
+              {/* Text Section */}
+              <div className="w-full md:w-[40%] lg:w-[30%] relative px-4 md:px-0">
+                <div className="bg-transparent p-4 md:p-6 rounded-xl transition-all duration-500">
+                  <div className="flex flex-row items-center mb-2 md:-ml-[150px]">
+                    <div className="w-12 md:w-[180px] h-0.5 bg-[#495944] mr-3"></div>
+                    <p className="text-sm font-medium text-[#7A7A7A]">
+                      <span className="text-[#495944] text-xl md:text-2xl font-semibold">{project.year}</span>
                     </p>
-
-                    <Link
-                      to={project.link}
-                      className="group text-sm text-[#495944] font-medium capitalize inline-flex items-center gap-2 hover:text-[#D1BAA2] transition-all duration-200"
-                    >
-                      Read more
-                      <SlActionRedo className="group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
                   </div>
+
+                  <h4 className="text-lg md:text-xl font-bold text-[#495944] capitalize mb-2">
+                    {project.title}
+                  </h4>
+                  <p className="text-xs md:text-sm text-[#505050] mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <Link
+                    to={project.link}
+                    className="group text-xs md:text-sm text-[#495944] font-medium capitalize inline-flex items-center gap-2 hover:text-[#D1BAA2] transition-all duration-200"
+                  >
+                    Read more
+                    <SlActionRedo className="group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </div>
-              </SplideSlide>
-            ))
-          }
+              </div>
+            </SplideSlide>
+          ))}
         </Splide>
       </div>
 
-
       <Testimonial />
-      <div>
-        <div className="container px-4 mx-auto py-16">
-          <div className="relative mb-4">
-            <h2 className='text-[25px] font-normal tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-20 after:h-0.5 after:bg-[#495944]'>
-              Blog
-            </h2>
-          </div>
-          <h3 className="text-[#495944] text-4xl font-semibold uppercase mb-12 font-nunito">
-            Our latest post.
-          </h3>
 
-          <div className="flex flex-wrap gap-x-6 justify-center mb-8">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] hover:cursor-pointer ${activeFilter === filter
-                  ? "text-[#495944]"
-                  : "text-[#495944aa] hover:bg-gray-200"
-                  }`}
+      {/* Blog Section */}
+      <div className="container px-4 mx-auto py-12 md:py-16">
+        <div className="relative mb-4">
+          <h2 className='text-lg md:text-[25px] font-normal tracking-[3px] md:tracking-[5px] uppercase text-[#D1BAA2] relative after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-12 md:after:w-20 after:h-0.5 after:bg-[#495944]'>
+            Blog
+          </h2>
+        </div>
+        <h3 className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito">
+          Our latest post.
+        </h3>
+
+        <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center mb-6 md:mb-8">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-sm md:text-[20px] hover:cursor-pointer px-2 py-1 ${activeFilter === filter
+                ? "text-[#495944] border-b-2 border-[#495944]"
+                : "text-[#495944aa] hover:bg-gray-200 rounded"
+                }`}
+            >
+              {filter.toUpperCase()}
+            </button>
+          ))}
+        </div>
+
+        {/* Blog Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <AnimatePresence>
+            {filteredBlogs.map((blog) => (
+              <MotionDiv
+                key={blog.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden flex flex-col"
               >
-                {filter.toUpperCase()}
-              </button>
-            ))}
-          </div>
-
-          {/* Blog Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <AnimatePresence>
-              {filteredBlogs.map((blog) => (
-                <MotionDiv
-                  key={blog.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden flex flex-col"
-                >
-                  <img
-                    src={blog.img}
-                    alt={blog.title}
-                    className="h-72 w-full object-cover"
-                  />
-                  <div className="p-5 flex flex-col flex-1">
-                    <h3 className="text-xl font-bold mb-2 text-[#495944] capitalize">
-                      {blog.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4 capitalize">
-                      {blog.excerpt}
-                    </p>
-                    <div className="mt-auto">
-                      <button className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium">
-                        Read More →
-                      </button>
-                    </div>
+                <img
+                  src={blog.img}
+                  alt={blog.title}
+                  className="h-48 md:h-72 w-full object-cover"
+                />
+                <div className="p-4 md:p-5 flex flex-col flex-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-[#495944] capitalize">
+                    {blog.title}
+                  </h3>
+                  <p className="text-xs md:text-sm text-gray-600 mb-4 capitalize">
+                    {blog.excerpt}
+                  </p>
+                  <div className="mt-auto">
+                    <button className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium text-sm md:text-base">
+                      Read More →
+                    </button>
                   </div>
-                </MotionDiv>
-              ))}
-            </AnimatePresence>
-          </div>
+                </div>
+              </MotionDiv>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 pt-16">
-        <div className="bg-[#D9D9D9] relative h-[500px]">
-          <div className="w-full lg:w-1/2 md:w-1/2">
+      {/* Newsletter Section */}
+      <div className="container mx-auto px-4 pt-12 md:pt-16">
+        <div className="bg-[#D9D9D9] relative h-[180px] md:h-[500px]">
+          <div className="hidden md:block md:w-1/2">
             <img
               src={assets.newsletter}
-              alt=""
-              className="absolute bottom-0 left-0 z-10"
+              alt="Newsletter"
+              className="absolute bottom-0 left-0 z-10 h-[300px] md:h-auto"
             />
           </div>
-          <div className="w-full lg:w-1/2 md:w-1/2">
-            <div className="absolute top-[40%] left-[40%] transform -translate-x-[0%] -translate-y-[40%] text-left z-0">
-              <h3 className="text-[50px] font-bold uppercase text-[#495944] leading-tight">
+          <div className="w-full md:w-1/2">
+            <div className="absolute top-[20%] md:top-[40%] left-[5%] md:left-[40%] transform -translate-x-[0%] -translate-y-[20%] md:-translate-y-[40%] text-left z-0 px-4 md:px-0">
+              <h3 className="text-2xl md:text-[50px] font-bold uppercase text-[#495944] leading-tight">
                 stay up-to-date
                 <br />
                 with archisphere
               </h3>
-              <img src={assets.arrow} alt="" className="absolute top-15 -right-15" />
+              <img src={assets.arrow} alt="" className="hidden md:block absolute top-15 -right-15" />
             </div>
-            <div className="absolute bottom-[10%] right-[10%] transform -translate-x-[0%] -translate-y-[60%] text-left z-0">
-              <form className="flex flex-col md:flex-row gap-4">
+            <div className="absolute bottom-[10%] right-[5%] md:right-[5%] transform -translate-x-[0%] -translate-y-[10%] md:-translate-y-[60%] text-left z-10 w-[80%] md:w-auto">
+              <form className="flex flex-col md:flex-row gap-4 relative">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="px-8 py-3 bg-white rounded-4xl w-[480px] relative shadow-lg"
+                  className="px-4 md:px-8 py-2 md:py-3 bg-white rounded-full w-full md:w-[480px] shadow-lg text-sm md:text-base"
                 />
                 <button
                   type="submit"
-                  className="bg-[#495944] text-white px-6 py-2 rounded-4xl hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] hover:cursor-pointer transition-colors absolute top-0 right-0 mr-2 mt-1 duration-300"
+                  className="bg-[#495944] text-white px-4 md:px-6 py-1 md:py-2 rounded-full hover:bg-white hover:text-[#495944] hover:border hover:border-[#495944] hover:cursor-pointer transition-colors absolute md:absolute top-0 right-0 mr-2 mt-1 md:mr-2 md:mt-1 duration-300 text-sm md:text-base"
                 >
                   Subscribe
                 </button>

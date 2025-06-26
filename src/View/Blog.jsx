@@ -210,24 +210,27 @@ const Blogs = () => {
 
   return (
     <Layout>
-      <div className="container px-4 mx-auto py-16">
+      <div className="container px-4 mx-auto py-8 md:py-16 mt-20">
+        {/* Header Section */}
         <div className="relative mb-6 text-center">
-          <h2 className='text-sm md:text-base font-medium tracking-[6px] uppercase text-[#D1BAA2] inline-block relative mb-3 after:content-[""] after:absolute after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-0.5 after:bg-[#495944]'>
+          <h2 className='text-xs sm:text-sm md:text-base font-medium tracking-[4px] sm:tracking-[6px] uppercase text-[#D1BAA2] inline-block relative mb-2 sm:mb-3 after:content-[""] after:absolute after:bottom-[-6px] sm:after:bottom-[-8px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-12 sm:after:w-20 after:h-0.5 after:bg-[#495944]'>
             Blog
           </h2>
-          <h3 className="text-[#495944] text-4xl md:text-5xl font-semibold uppercase font-nunito mt-4">
+          <h3 className="text-[#495944] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase font-nunito mt-2 sm:mt-4">
             Our Latest Post
           </h3>
         </div>
 
-        <div className="flex flex-wrap gap-x-6 justify-center mb-8">
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-6 justify-center mb-6 sm:mb-8">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-[20px] hover:cursor-pointer ${
-                activeFilter === filter ? "text-[#495944]" : "text-[#0c0c0caa]"
-              }`}
+              className={`tracking-wider sm:tracking-widest uppercase text-[#495944bb] font-semibold transition text-sm sm:text-base md:text-[20px] hover:cursor-pointer px-2 py-1 rounded ${activeFilter === filter
+                  ? "text-[#495944] border-b-2 border-[#495944]"
+                  : "text-[#0c0c0caa] hover:bg-gray-100"
+                }`}
             >
               {filter.toUpperCase()}
             </button>
@@ -235,7 +238,7 @@ const Blogs = () => {
         </div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <AnimatePresence>
             {filteredBlogs.map((blog) => (
               <MotionDiv
@@ -245,24 +248,25 @@ const Blogs = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden flex flex-col"
+                className="bg-white rounded-lg sm:rounded-xl shadow-sm hover:shadow-md overflow-hidden flex flex-col"
               >
                 <img
                   src={blog.img}
                   alt={blog.title}
-                  className="h-72 w-full object-cover"
+                  className="h-48 sm:h-56 md:h-64 w-full object-cover"
+                  loading="lazy"
                 />
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold mb-2 text-[#495944] capitalize">
+                <div className="p-4 sm:p-5 flex flex-col flex-1">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#495944] capitalize">
                     {blog.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-4 capitalize">
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 capitalize">
                     {blog.excerpt}
                   </p>
                   <div className="mt-auto">
                     <Link
                       to={blog.link}
-                      className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium"
+                      className="text-[#D1BAA2] hover:underline hover:cursor-pointer font-medium text-sm sm:text-base"
                     >
                       Read More →
                     </Link>

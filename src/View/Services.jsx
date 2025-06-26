@@ -70,116 +70,143 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Section 3: Our Process */}
-      <section className="bg-[#F5F5F5] py-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <h3 className="text-3xl font-bold text-[#495944] uppercase mb-12 text-center">
-            Our Process
-          </h3>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+       {/* Process Section */}
+      <section className="bg-[#F8F8F8] py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-block text-sm md:text-base tracking-widest text-[#D1BAA2] uppercase mb-2">
+              Methodology
+            </span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#495944] mb-4">
+              Our Design Process
+            </h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
+              A structured approach that ensures clarity, creativity, and client satisfaction
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <FaRegLightbulb />,
+                icon: <FaRegLightbulb className="w-8 h-8 md:w-10 md:h-10" />,
                 title: "Discovery",
-                desc: "Understanding your goals & vision.",
+                desc: "Deep dive into your needs and project requirements",
               },
               {
-                icon: <FaDraftingCompass />,
-                title: "Planning",
-                desc: "Creating tailored strategies & layouts.",
+                icon: <FaDraftingCompass className="w-8 h-8 md:w-10 md:h-10" />,
+                title: "Conceptualization",
+                desc: "Developing designs that capture your vision",
               },
               {
-                icon: <FaTools />,
-                title: "Execution",
-                desc: "Turning plans into precise, real-world results.",
+                icon: <FaTools className="w-8 h-8 md:w-10 md:h-10" />,
+                title: "Development",
+                desc: "Refining designs with technical details",
               },
               {
-                icon: <FaPeopleCarry />,
+                icon: <FaPeopleCarry className="w-8 h-8 md:w-10 md:h-10" />,
                 title: "Delivery",
-                desc: "Seamless handover & post-project support.",
+                desc: "Final implementation and handover",
               },
             ].map((step, i) => (
               <div
                 key={i}
-                className="flex flex-col justify-center items-center p-6 bg-white rounded-xl shadow hover:shadow-md transition"
+                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 text-center"
               >
-                <div className="text-4xl text-[#D1BAA2] mb-4">{step.icon}</div>
-                <h4 className="text-xl font-semibold text-[#495944] mb-2">
-                  {step.title}
-                </h4>
-                <p className="text-[#555] text-sm">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Why Choose Us */}
-      <section className="py-20 px-4 bg-[#F5F5F5]">
-        <div className="container mx-auto text-center max-w-5xl">
-          <h3 className="text-3xl font-bold text-[#495944] uppercase mb-6 tracking-wide">
-            Why Choose Archisphere?
-          </h3>
-          <p className="text-[#666] mb-12 text-base leading-relaxed">
-            We don’t just design spaces — we design experiences. Our work blends
-            creativity, sustainability, and precision to deliver architectural
-            excellence that endures.
-          </p>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-8 text-left">
-            {[
-              {
-                title: "Client-Centric Design",
-                desc: "Every design reflects your goals, lifestyle, and vision — not just our creativity.",
-              },
-              {
-                title: "Sustainability First",
-                desc: "Green design isn’t an option — it’s integrated into every stage of our work.",
-              },
-              {
-                title: "Experienced Team",
-                desc: "Led by experts with global exposure, our team delivers unmatched innovation.",
-              },
-              {
-                title: "On-Time Delivery",
-                desc: "We respect your deadlines without compromising creativity or quality.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl shadow hover:shadow-lg p-6 border-l-4 border-[#D1BAA2] transition duration-300 flex items-start gap-4"
-              >
-                <FaCheckCircle className="text-[#D1BAA2] text-xl mt-1" />
-                <div>
-                  <h4 className="text-xl font-semibold text-[#495944] mb-1">
-                    {item.title}
-                  </h4>
-                  <p className="text-[#555] text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
+                <div className="bg-[#F5F2EA] w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full flex items-center justify-center mb-4 text-[#D1BAA2]">
+                  {step.icon}
                 </div>
+                <h3 className="text-lg md:text-xl font-semibold text-[#495944] mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 5: CTA */}
-      <section className="bg-[#495944] py-20 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-bold uppercase mb-4">
-            Let’s Build Something Meaningful
-          </h3>
-          <p className="max-w-xl mx-auto mb-8 text-lg text-[#E0E0E0]">
-            From concept to construction, we’re with you at every step. Let’s
-            collaborate to bring your vision to life.
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+            <div className="md:w-1/2">
+              <img 
+                src={assets.aboutus} 
+                alt="Architecture team working" 
+                className="rounded-xl shadow-md w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <span className="inline-block text-sm md:text-base tracking-widest text-[#D1BAA2] uppercase mb-2">
+                Our Difference
+              </span>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#495944] mb-6">
+                Why Clients Choose Us
+              </h2>
+              
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Client-Centric Approach",
+                    desc: "We prioritize your vision and needs in every design decision",
+                  },
+                  {
+                    title: "Sustainable Solutions",
+                    desc: "Eco-conscious designs that reduce environmental impact",
+                  },
+                  {
+                    title: "Technical Excellence",
+                    desc: "Precision in every detail for flawless execution",
+                  },
+                  {
+                    title: "Transparent Process",
+                    desc: "Clear communication at every project stage",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <FaCheckCircle className="text-[#D1BAA2] mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#495944] mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm md:text-base">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#495944] py-16 md:py-20 text-white text-center">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase mb-4">
+            Ready to Begin Your Project?
+          </h2>
+          <p className="text-lg md:text-xl text-[#E0E0E0] mb-8 max-w-2xl mx-auto">
+            Let's collaborate to create spaces that inspire and endure
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-[#495944] px-8 py-3 rounded-full text-sm font-semibold uppercase hover:bg-[#D1BAA2] hover:text-white transition duration-300"
-          >
-            Contact Us
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-[#495944] px-8 py-3 rounded-full text-sm font-semibold uppercase hover:bg-[#D1BAA2] hover:text-white transition duration-300"
+            >
+              Get a Consultation
+            </a>
+            <a
+              href="/projects"
+              className="inline-block border-2 border-white text-white px-8 py-3 rounded-full text-sm font-semibold uppercase hover:bg-white hover:text-[#495944] transition duration-300"
+            >
+              View Our Work
+            </a>
+          </div>
         </div>
       </section>
     </Layout>
