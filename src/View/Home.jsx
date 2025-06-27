@@ -1,58 +1,63 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout.Jsx";
+import Layout from "../components/Layout.jsx";
 import { assets } from "../assets/assets";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import CounterUp from "../components/CounterUp";
 import Testimonial from "../components/Testimonial";
 import { SlActionRedo } from "react-icons/sl";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Home = () => {
-
   const projects = [
     {
       img: assets.project1,
-      title: 'Poolscape Villa',
-      description: 'A luxurious villa nestled in a coastal setting, Poolscape Villa celebrates modern living with a seamless blend of architecture and nature. Designed with sweeping open plans, infinity-edge pools, and panoramic glass walls, it offers an immersive experience into sea views and sunset horizons.',
+      title: "Poolscape Villa",
+      description:
+        "A luxurious villa nestled in a coastal setting, Poolscape Villa celebrates modern living with a seamless blend of architecture and nature. Designed with sweeping open plans, infinity-edge pools, and panoramic glass walls, it offers an immersive experience into sea views and sunset horizons.",
       year: 2024,
-      link: '/project/poolscape-villa-2024',
+      link: "/project/poolscape-villa-2024",
     },
     {
       img: assets.project2,
-      title: 'European Lard Station',
-      description: 'A remarkable public infrastructure project, the European Lard Station integrates classical European design with high-functioning urban mobility. Featuring a 750-seat hemicycle, advanced office complexes, commission chambers, and expansive public walkways, the space reflects modern governance and design harmony.',
+      title: "European Lard Station",
+      description:
+        "A remarkable public infrastructure project, the European Lard Station integrates classical European design with high-functioning urban mobility. Featuring a 750-seat hemicycle, advanced office complexes, commission chambers, and expansive public walkways, the space reflects modern governance and design harmony.",
       year: 2023,
-      link: '/project/european-lard-station-2023',
+      link: "/project/european-lard-station-2023",
     },
     {
       img: assets.project3,
-      title: 'Yabroudi Villa',
-      description: 'Located atop a sea-kissed cliff, this villa redefines luxury with fluid interiors, ambient lighting, and eco-sensitive materials. Every room opens to nature, and its spatial rhythm harmonizes indoor tranquility with the vibrancy of its coastal surroundings.',
+      title: "Yabroudi Villa",
+      description:
+        "Located atop a sea-kissed cliff, this villa redefines luxury with fluid interiors, ambient lighting, and eco-sensitive materials. Every room opens to nature, and its spatial rhythm harmonizes indoor tranquility with the vibrancy of its coastal surroundings.",
       year: 2022,
-      link: '/project/yabroudi-villa-2022',
+      link: "/project/yabroudi-villa-2022",
     },
     {
       img: assets.project4,
-      title: 'Cultural Complex Centre',
-      description: 'Serving as a dynamic civic node, this station brings together government function, public accessibility, and architectural presence. The design is focused on transparency, spatial hierarchy, and user-centered movement — a true example of democratic architecture in action.',
+      title: "Cultural Complex Centre",
+      description:
+        "Serving as a dynamic civic node, this station brings together government function, public accessibility, and architectural presence. The design is focused on transparency, spatial hierarchy, and user-centered movement — a true example of democratic architecture in action.",
       year: 2021,
-      link: '/project/cultural-complex-centre-2021',
+      link: "/project/cultural-complex-centre-2021",
     },
     {
       img: assets.project5,
-      title: 'Dalbourne Villa',
-      description: 'This residential marvel combines minimalism with modern comfort. The Poolscape Villa 2020 edition showcases smart lighting, passive cooling design, and integrated water features. A meditative retreat made for the modern soul.',
+      title: "Dalbourne Villa",
+      description:
+        "This residential marvel combines minimalism with modern comfort. The Poolscape Villa 2020 edition showcases smart lighting, passive cooling design, and integrated water features. A meditative retreat made for the modern soul.",
       year: 2020,
-      link: '/project/dalbourne-villa-2020',
+      link: "/project/dalbourne-villa-2020",
     },
     {
       img: assets.project6,
-      title: 'Amman Rotana Hotel',
-      description: 'An early iteration of the station, this phase established the project’s foundation with sustainability, scalability, and civic dignity. Its modular forms and clean urban lines set the tone for future expansions with purpose and poise.',
+      title: "Amman Rotana Hotel",
+      description:
+        "An early iteration of the station, this phase established the project’s foundation with sustainability, scalability, and civic dignity. Its modular forms and clean urban lines set the tone for future expansions with purpose and poise.",
       year: 2019,
-      link: '/project/amman-rotana-hotel-2019',
+      link: "/project/amman-rotana-hotel-2019",
     },
   ];
 
@@ -109,7 +114,6 @@ const Home = () => {
 
   const filters = ["All article", "projects", "press", "studio"];
 
-
   const [activeFilter, setActiveFilter] = useState("All article");
 
   const filteredBlogs =
@@ -122,18 +126,18 @@ const Home = () => {
   const services = [
     {
       img: assets.service1,
-      title: 'Design Consultation',
-      number: '01',
+      title: "Design Consultation",
+      number: "01",
     },
     {
       img: assets.service2,
-      title: 'Interior Planning',
-      number: '02',
+      title: "Interior Planning",
+      number: "02",
     },
     {
       img: assets.service3,
-      title: 'Project Execution',
-      number: '03',
+      title: "Project Execution",
+      number: "03",
     },
   ];
 
@@ -154,10 +158,18 @@ const Home = () => {
           }}
         >
           <SplideSlide>
-            <img src={assets.bn1} alt="Modern Architecture" className="w-full h-screen md:h-[90vh] object-cover" />
+            <img
+              src={assets.bn1}
+              alt="Modern Architecture"
+              className="w-full h-screen md:h-[90vh] object-cover"
+            />
           </SplideSlide>
           <SplideSlide>
-            <img src={assets.bn2} alt="Innovative Design" className="w-full h-screen md:h-[90vh] object-cover" />
+            <img
+              src={assets.bn2}
+              alt="Innovative Design"
+              className="w-full h-screen md:h-[90vh] object-cover"
+            />
           </SplideSlide>
         </Splide>
 
@@ -204,7 +216,11 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <img src={assets.aboutus} alt="About our company" className="w-full h-auto" />
+            <img
+              src={assets.aboutus}
+              alt="About our company"
+              className="w-full h-auto"
+            />
           </motion.div>
 
           {/* TEXT BLOCK */}
@@ -277,7 +293,6 @@ const Home = () => {
         </div>
       </div>
 
-
       <CounterUp />
 
       {/* Services Section */}
@@ -295,7 +310,7 @@ const Home = () => {
         </motion.div>
 
         <motion.h3
-          className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-6 md:mb-8 font-nunito'
+          className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-6 md:mb-8 font-nunito"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -350,7 +365,7 @@ const Home = () => {
         </motion.div>
 
         <motion.h3
-          className='text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito'
+          className="text-[#495944] text-2xl md:text-4xl font-semibold uppercase mb-8 md:mb-12 font-nunito"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -372,12 +387,15 @@ const Home = () => {
             breakpoints: {
               768: {
                 arrows: false,
-              }
-            }
+              },
+            },
           }}
         >
           {projects.map((project, index) => (
-            <SplideSlide key={index} className="flex flex-col md:flex-row justify-around items-center gap-y-6 pb-8">
+            <SplideSlide
+              key={index}
+              className="flex flex-col md:flex-row justify-around items-center gap-y-6 pb-8"
+            >
               {/* Image with Motion */}
               <motion.div
                 className="w-full md:w-[60%] overflow-hidden rounded-xl"
@@ -405,7 +423,9 @@ const Home = () => {
                   <div className="flex flex-row items-center mb-2 md:-ml-[150px]">
                     <div className="w-12 md:w-[180px] h-0.5 bg-[#495944] mr-3"></div>
                     <p className="text-sm font-medium text-[#7A7A7A]">
-                      <span className="text-[#495944] text-xl md:text-2xl font-semibold">{project.year}</span>
+                      <span className="text-[#495944] text-xl md:text-2xl font-semibold">
+                        {project.year}
+                      </span>
                     </p>
                   </div>
 
@@ -448,10 +468,11 @@ const Home = () => {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-sm md:text-[20px] hover:cursor-pointer px-2 py-1 ${activeFilter === filter
-                ? "text-[#495944] border-b-2 border-[#495944]"
-                : "text-[#495944aa] hover:bg-gray-200 rounded"
-                }`}
+              className={`tracking-widest uppercase text-[#495944bb] font-semibold transition text-sm md:text-[20px] hover:cursor-pointer px-2 py-1 ${
+                activeFilter === filter
+                  ? "text-[#495944] border-b-2 border-[#495944]"
+                  : "text-[#495944aa] hover:bg-gray-200 rounded"
+              }`}
             >
               {filter.toUpperCase()}
             </button>
@@ -512,7 +533,11 @@ const Home = () => {
                 <br />
                 with archisphere
               </h3>
-              <img src={assets.arrow} alt="" className="hidden md:block absolute top-15 -right-15" />
+              <img
+                src={assets.arrow}
+                alt=""
+                className="hidden md:block absolute top-15 -right-15"
+              />
             </div>
             <div className="absolute bottom-[10%] right-[5%] md:right-[5%] transform -translate-x-[0%] -translate-y-[10%] md:-translate-y-[60%] text-left z-10 w-[80%] md:w-auto">
               <form className="flex flex-col md:flex-row gap-4 relative">
